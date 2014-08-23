@@ -16,7 +16,12 @@ alias sf='fasd -sif'     # interactive file selection
 alias d='fasd_cd -d'     # cd, same functionality as j in autojump
 alias zz='fasd_cd -d -i' # cd with interactive selection
 alias v='f -e vim'
+
+#ls aliases
 LS_COLORS='di=0;35'
 export LS_COLORS
 alias ls='ls -G'
+
+#git aliases
+alias gits='git status'
 
