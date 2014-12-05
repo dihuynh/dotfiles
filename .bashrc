@@ -16,12 +16,17 @@ alias sf='fasd -sif'     # interactive file selection
 alias d='fasd_cd -d'     # cd, same functionality as j in autojump
 alias zz='fasd_cd -d -i' # cd with interactive selection
 alias v='f -e vim'
-
-#ls aliases
 LS_COLORS='di=0;35'
 export LS_COLORS
 alias ls='ls -G'
 
 #git aliases
 alias gits='git status'
+alias screenSharing='open /System/Library/CoreServices/Screen\ Sharing.app/'
+    searchFunction(){
+        grep $1 * -i -R -A 2 -B 2 --colour=auto --exclude-dir=target --exclude-dir=config
+    }
+alias search=searchFunction
 
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$PATH:/usr/local/go/bin"

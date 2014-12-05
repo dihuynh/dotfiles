@@ -2,12 +2,7 @@ set nocompatible
 filetype off
 filetype plugin indent on
 
-set tabstop=2
-set softtabstop=2       
-set expandtab
 set encoding=utf-8
-set scrolloff=3
-set autoindent
 set showcmd
 set hidden
 set wildmenu
@@ -19,7 +14,10 @@ set ruler
 set backspace=indent,eol,start
 set laststatus=2
 set number
-
+set smartindent
+set tabstop=4
+set shiftwidth=4
+set expandtab
 "set undofile -creates a file when you edit that allows undoing after closing the file <FILENAME>.un~
 set ignorecase
 set smartcase
@@ -65,4 +63,10 @@ map <C-I> gt
 augroup myvimrc
     au!
     au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
+augroup END
+
+"auto resize split panes when window size changes
+augroup Misc
+    autocmd!
+    autocmd VimResized * exe "normal! \<c-w>="
 augroup END
