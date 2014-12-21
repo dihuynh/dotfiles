@@ -24,12 +24,15 @@ alias ls='ls -G'
 alias gits='git status'
 alias gitcleanup='git checkout src/{applications,layouts,workflows,triggers,objects,labels,dashboards,permissionsets}'
 alias gitdiff='git diff --color -U0 --minimal --no-prefix --ignore-all-space | egrep -v "index [[:xdigit:]]*..[[:xdigit:]]* [[:xdigit:]]*" | grep -v "diff --git "'
-alias gitlog='git --no-pager  log -n30 --pretty=oneline'
+alias gitlog=log
+log() {
+    git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+}
 
 alias screenSharing='open /System/Library/CoreServices/Screen\ Sharing.app/'
-    searchFunction(){
-        grep $1 * -i -R -A 2 -B 2 --colour=auto --exclude-dir=target --exclude-dir=config
-    }
+searchFunction(){
+    grep $1 * -i -R -A 2 -B 2 --colour=auto --exclude-dir=target --exclude-dir=config
+}
 alias search=searchFunction
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
