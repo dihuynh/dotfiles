@@ -2,6 +2,8 @@ set nocompatible
 filetype off
 filetype plugin indent on
 
+set clipboard=unnamedplus
+
 set encoding=utf-8
 set showcmd
 set hidden
@@ -13,7 +15,10 @@ set cursorline
 set ruler
 set backspace=indent,eol,start
 set laststatus=2
+"show line number"
 set number
+"show relative line number"
+set relativenumber  
 set smartindent
 set tabstop=4
 set shiftwidth=4
@@ -26,7 +31,7 @@ set showmatch
 set hlsearch
 set noswapfile
 
-" Disabddle arrow keys :)
+" Disabddle arrow keys"
 noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
@@ -46,7 +51,6 @@ inoremap <C-Z> <ESC>
 "syntax on
 syntax enable
 set background=dark
-colorscheme molokai
 
 "Map window movement
 map <C-J> <C-W>j
@@ -59,6 +63,9 @@ map <C-N> <Esc>:NERDTreeTabsToggle<CR>
 map <C-U> gT 
 map <C-I> gt 
 
+" If installed using Homebrew
+set rtp+=/usr/local/opt/fzf
+
 "Look for .vimrc changes and autoload them to open vim instances
 augroup myvimrc
     au!
@@ -70,3 +77,4 @@ augroup Misc
     autocmd!
     autocmd VimResized * exe "normal! \<c-w>="
 augroup END
+execute pathogen#infect()
