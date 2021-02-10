@@ -1,13 +1,14 @@
 [color]
-	ui = true
+    ui = true
 [push]
-	default = simple
+    default = simple
 [user]
-	name = Di Huynh
-  email = dihuynh@cs.utexas.edu
+    name = Di Huynh
+    email = 
 
-[filter "media"]
-	clean = git-media-clean %f
+[filter "media]
+    clean = git-media-clean %f
+
 [color]
     ui = auto
     interactive = auto
@@ -27,3 +28,8 @@
     added = green
     changed = magenta
     untracked = bold yellow
+
+[alias]
+    co = checkout
+    cp = cherry-pick
+    st = stash 
