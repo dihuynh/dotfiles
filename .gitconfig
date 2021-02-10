@@ -4,10 +4,11 @@
 	default = simple
 [user]
 	name = Di Huynh
-  email = dihuynh@cs.utexas.edu
+    email = di.huynh@blackbaud.com
 
 [filter "media"]
 	clean = git-media-clean %f
+
 [color]
     ui = auto
     interactive = auto
@@ -27,3 +28,8 @@
     added = green
     changed = magenta
     untracked = bold yellow
+
+[alias]
+	co = checkout
+    cp = cherry-pick
+    st = stash 
