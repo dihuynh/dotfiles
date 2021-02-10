@@ -1,13 +1,13 @@
 [color]
-	ui = true
+    ui = true
 [push]
-	default = simple
+    default = simple
 [user]
-	name = Di Huynh
+    name = Di Huynh
     email = 
 
-[filter "media"]
-	clean = git-media-clean %f
+[filter "media]
+    clean = git-media-clean %f
 
 [color]
     ui = auto
@@ -30,6 +30,6 @@
     untracked = bold yellow
 
 [alias]
-	co = checkout
+    co = checkout
     cp = cherry-pick
     st = stash 
